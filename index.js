@@ -7,8 +7,12 @@ if (votingAge > 18) {
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-var num = 8;
-if
+var num = 15;
+if(num < 18) {
+    console.log('You are a minor.');
+} else if (num >= 18){
+    console.log('You are not a minor.');
+}
 
 
 
@@ -37,6 +41,7 @@ calculateDogAge(23);
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
 
 //feeding requirements
+
 // adult dogs at least 1 year 
 // up to 5 lbs - 5% of their body weight
 // 6 - 10 lbs - 4% of their body weight 
@@ -49,9 +54,22 @@ calculateDogAge(23);
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
+function dogFeeder(weight, age){
 
-
+    if (age >=1 && weight <= 5){
+    console.log(weight*age*.05)
+}
+    elseif (age >=1 && (weight >=6 || weight <=10)){
+    console.log(weight*age*.04)
+}
+    elseif (age >=1 && (weight >=11 || weight <=15)){
+    console.log(weight*age*.03)
+}
+    elseif (age >=1 && weight > 15){
+    console.log(weight*age*.02)
+}
+}
+dogFeeder(15,1);
 
 
 /************************************************************** Task 4 **************************************************************/
@@ -67,13 +85,13 @@ calculateDogAge(23);
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
-
+//mi = km * 0.62137
+var miles;
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
+//cm = ft/0.032808
 
 
 
