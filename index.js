@@ -87,7 +87,19 @@ dogFeeder(15,1);
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+function game(){
+    var rock = Math.random();
+    var scissors = Math.random();
+    var paper = Math.random();
+    if(rock > scissors || paper > rock || scissors > paper){
+        return("You won!"); 
+    }
+    else if(rock < scissors || paper < rock || scissors < paper){
+        return("You lost.")
+    }
+}
 
+game()
   
   
 
@@ -114,11 +126,11 @@ feet(14)
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  function annoyingSong(){
+  function annoyingSong(bottles){
       var bottles;
-      var bottlesLeft;
+      // var bottlesLeft;
       for(i=99, i>=1, i--){
-          return i + " bottles of soda on the wall, " + i " bottles of soda, " + " take one down pass it around " + i + " bottles of soda on the wall.";
+          console.log(bottles + " bottles of soda on the wall, " + bottles " bottles of soda, " + " take one down pass it around " + bottles + " bottles of soda on the wall.");
          }
         }
         annoyingSong(99);
