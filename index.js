@@ -29,8 +29,8 @@ multiply(4,4)
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-function calculateDogAge(age) {
-    return age*7;
+function calculateDogAge(years) {
+    return years*7;
 }
 calculateDogAge(23);
 
@@ -57,17 +57,26 @@ calculateDogAge(23);
 function dogFeeder(weight, age){
 
     if (age >=1 && weight <= 5){
-    console.log(weight*age*.05)
-}
-    elseif (age >=1 && (weight >=6 || weight <=10)){
-    console.log(weight*age*.04)
-}
-    elseif (age >=1 && (weight >=11 || weight <=15)){
-    console.log(weight*age*.03)
-}
-    elseif (age >=1 && weight > 15){
-    console.log(weight*age*.02)
-}
+        return weight * 0.05
+    }
+    else if (age >=1 && (weight >=6 && weight <=10)){
+        return weight * 0.04
+    }
+    else if (age >=1 && (weight >=11 && weight <=15)){
+        return weight * 0.03
+    }
+    else if (age >=1 && weight > 15){
+        return weight * 0.02
+    }
+    else if (age >= 0.2 && age <= 0.39){
+        return weight * .1
+    }
+    else if (age >= .4 && age <= .69){
+        return weight * .05
+    }
+    else if (age >= 0.7 && age <= .12){
+        return weight * .04
+    }
 }
 dogFeeder(15,1);
 
@@ -86,13 +95,18 @@ dogFeeder(15,1);
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 //mi = km * 0.62137
-var miles;
-
+function kilometers(param3){
+    return (param3 * 0.62137);
+}
+kilometers(13)
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
 //cm = ft/0.032808
-
+function feet(param4){
+    return (param4/0.032808);
+}
+feet(14)
 
 
 
@@ -100,8 +114,10 @@ var miles;
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
-
+  function annoyingSong(let i = 99){
+      console.log(number + "bottles of soda on the wall, " + number + "bottles of soda, take one down pass it around " + leftOver + "botts of soda on the wall")
+  }
+annoyingSong()
 
 
 
