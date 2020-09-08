@@ -114,11 +114,14 @@ feet(14)
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  function annoyingSong(let i = 99){
-      console.log(number + "bottles of soda on the wall, " + number + "bottles of soda, take one down pass it around " + leftOver + "botts of soda on the wall")
-  }
-annoyingSong()
-
+  function annoyingSong(){
+      var bottles;
+      var bottlesLeft;
+      for(i=99, i>=1, i--){
+          return i + " bottles of soda on the wall, " + i " bottles of soda, " + " take one down pass it around " + i + " bottles of soda on the wall.";
+         }
+        }
+        annoyingSong(99);
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -129,7 +132,25 @@ annoyingSong()
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
+  function gradeCalculator(number){
+      if(number >= 90){
+          return ("You got an A!");
+      }
+      else if(number >=80 && number <=89){
+          return ("You got a B!");
+      }
+      else if(number >=70 && number <=79){
+          return ("You got a C.");
+      }
+      else if(number >=60 && number <=69){
+          return ("You got a D.");
+      }
+      else if(number <60){
+          return ("Sorry, you failed.");
+      }
+  }
+
+  gradeCalculator(100)
 
   
   
