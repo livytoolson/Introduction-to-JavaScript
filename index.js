@@ -87,19 +87,42 @@ dogFeeder(15,1);
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-function game(){
-    var rock = Math.random();
-    var scissors = Math.random();
-    var paper = Math.random();
-    if(rock > scissors || paper > rock || scissors > paper){
-        return("You won!"); 
-    }
-    else if(rock < scissors || paper < rock || scissors < paper){
-        return("You lost.")
-    }
+
+var userChoice = prompt("Do you choose rock, paper, or scissors?");
+var computerChoice = Math.random();
+if (computerChoice <= 0.33){
+    computerChoice = "rock";
+}
+else if (computerChoice <= 0.67 && computerChoice >= 0.34){
+    computerChoice = "paper";
+}
+else
+{computerChoice = "scissors";
 }
 
-game()
+var compare = function(choice1, choice2);
+if (choice1===choice2){
+    return("It's a tie!");
+}
+    if (choice1==="rock"){
+        if(choice2==="scissors"){
+            return("Rock wins!");
+        }
+        else return("Paper wins!")
+    }
+    if(choice1==="paper"){
+        if(choice2==="rock"){
+            return("Paper wins!");
+        }
+        else return("Rock wins!")
+    }
+    if(choice1==="scissors"){
+        if(choice2==="rock"){
+            return("Rock wins!");
+        }
+        else return("Scissors win!");
+    }
+    compare(userChoice, computerChoice)
   
   
 
